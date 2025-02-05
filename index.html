@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Notepad</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="toolbar">
+                <button id="new-note">+ New</button>
+                <input type="search" id="search" placeholder="Search notes...">
+            </div>
+            <div class="notes-list" id="notes-list"></div>
+        </aside>
+        
+        <main class="editor-container">
+            <div class="editor-toolbar">
+                <select id="formatting-tools">
+                    <option value="h1">Heading 1</option>
+                    <option value="h2">Heading 2</option>
+                    <option value="bold">Bold</option>
+                    <option value="italic">Italic</option>
+                </select>
+                <button id="toggle-preview">Preview</button>
+                <button id="export-pdf">Export PDF</button>
+                <button id="settings">⚙️</button>
+            </div>
+            
+            <div class="split-view">
+                <textarea id="editor" spellcheck="false"></textarea>
+                <div id="preview" class="preview hidden"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dist/main.js"></script>
+</body>
+</html>
